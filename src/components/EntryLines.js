@@ -1,15 +1,13 @@
 import React, { Fragment } from 'react'
 import EntryLine from './EntryLine'
 
-function EntryLines({entries, deleteEntry, editEntry, isOpen, setIsOpen}) {
+function EntryLines({entries}) {
     return (
         <Fragment>
             { entries.map(entry => (
               <EntryLine
                 key={entry.id}
                 {...entry}
-                deleteEntry={deleteEntry}
-                editEntry={editEntry}
                 />
             ))
           }
